@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+}
+
+a {
+  color: white;
+  font-size: 90%;
+}
+
+.flexCenter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+#mainContainer {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#imageContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+#loader {
+  animation: l3 1s infinite linear;
+  aspect-ratio: 1;
+  background: #268bd2;
+  border-radius: 50%;
+  --_m:  conic-gradient(#0000 10%,#000), linear-gradient(#000 0 0) content-box;
+  mask: var(--_m);
+  -webkit-mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  padding: 8px;
+  width: 50px;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#infoContainer {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
